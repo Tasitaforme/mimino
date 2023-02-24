@@ -4,30 +4,84 @@
   | default @import url()
   |============================
 */
-@import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
 
-/* utils */
-/* base */
-/* components */
-/* layout */
-/* pages */
+/* --- BASE --- */
+@import url('./base/normalize.css');
+@import url('./base/reset.css');
+@import url('./base/components.css');
 
 
+/* --- PAGES --- */
+@import url('./pages/header.css');
+@import url('./pages/footer.css');
+/* --- home --- */
+@import url('./pages/home/hero.css');
+@import url('./pages/home/about.css');
+@import url('./pages/home/restaurant-details.css');
+@import url('./pages/home/welcome.css');
+@import url('./pages/home/hotel-details.css');
+@import url('./pages/home/location.css');
+/* --- hotel --- */
+@import url('./pages/hotel/hero.css');
+@import url('./pages/hotel/double-room.css');
+@import url('./pages/hotel/triple-room.css');
+@import url('./pages/hotel/four-seater-room.css');
+/* --- restaurant --- */
+@import url('./pages/restaurant/hero.css');
+@import url('./pages/restaurant/kitchen.css');
+@import url('./pages/restaurant/menu.css');
+/* --- room-page --- */
+@import url('./pages/room-page/hero.css');
+@import url('./pages/room-page/amenities.css');
+
+@font-face {
+  font-family: 'Geometria-Medium', sans-serif;
+  src: url(../fonts/Geometria-Medium.ttf);
+}
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+  --primary-font: 'DM Sans', sans-serif;
+  --secondary-font: 'Geometria-Medium', sans-serif;
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+  --dark-color: #121212;
+  --middle-color: #484848;
+  --light-color: #F7F7F7;
+
+  --transition-dur-and-fun: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+body {
+  font-family: var(--primary-font);
+  text-transform: uppercase;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+}
+.no-scroll {
+  overflow: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
 }

@@ -1,0 +1,47 @@
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+/* .btn */
+button {
+    font-size: 18px;
+    line-height: 1.33;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    
+    transition: color var(--transition-dur-and-fun);
+}
+
+.btn-light {
+    color: #303030;
+}
+.btn-dark {
+    color: #303030;
+}
+
+/*! 375 - ... */
+@media screen and (min-width: 375px) {
+    
+}
+/*! 768-... */
+@media screen and (min-width: 768px) {
+.container {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+    }
+}
+/*! 1200 */
+@media screen and (min-width: 1440px) {
+    .container {
+        max-width: 1440px;
+    }
+}
